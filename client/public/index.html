@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    
+</head>
+<body>
+    hello client
+
+    <script>
+        var xmlHttp = new XMLHttpRequest()
+        xmlHttp.onreadystatechange = function() {
+            if (this.status == 200 && this.readyState == this.DONE) {
+            console.log(xmlHttp.responseText)
+            }
+        }
+
+        xmlHttp.open("GET", "http://localhost:3000/corsTest");
+        xmlHttp.send();
+    </script>
+</body>
+</html>
