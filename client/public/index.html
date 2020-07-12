@@ -13,12 +13,12 @@
         var xmlHttp = new XMLHttpRequest()
         xmlHttp.onreadystatechange = function() {
             if (this.status == 200 && this.readyState == this.DONE) {
-            console.log(xmlHttp.responseText)
+            console.log(xmlHttp.responseText);
             }
         }
 
-        xmlHttp.open("GET", "http://localhost:3000/corsTest");
-        xmlHttp.send();
+        xmlHttp.open("GET", "http://localhost:3000/corsTest?" + "id=gmm117&pw=hongseungah");
+        xmlHttp.send("id=gmm117&pw=hongseungah");
     </script>
 </body>
 </html>
